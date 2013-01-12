@@ -20,6 +20,7 @@ class Opinion
   property :date, Date
   property :url, Text
   property :filename, String, :length => 75
+  property :foreign_id, Integer
   
   belongs_to :case
 end
