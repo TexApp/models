@@ -5,7 +5,6 @@ class Case
   property :id, Serial
   property :court, Integer
   property :docket_number, String, :index => true
-  property :filed, Date
   property :style, Text
 
   has n, :opinions
@@ -17,7 +16,7 @@ class Opinion
   property :date, Date
   property :type, String
   property :url, Text
-  property :cloudfile, String, :length => 75
+  property :md5sum, String, :length => 32
   
   belongs_to :case
 end
